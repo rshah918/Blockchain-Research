@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Random Salamander Fact Generator</title>
+    <meta
+      name="description"
+      content="See a random fact about Salamanders."
+    />
+    <meta name="author" content="Rahul Shah" />
+    <style>
+      body {
+        margin: 15px auto;
+        max-width: 650px;
+        line-height: 1.2;
+        font-family: sans-serif;
+        font-size: 2em;
+        color: #fff;
+        background: #444;
+      }
+      a {
+        color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body onload="main()">
+    <h1>Random Salamander Facts</h1>
+    <img src="salamander.png" />
+    <p id="output_p"></p>
+    <h2><a href="about.html">About this website</a></h2>
+    <script>
+      function main() {
+        const facts = [
+          'The name Salamander comes from the Greek word for Fire Lizard',
+          'Salamanders are nocturnal',
+          'Some salamander species can be poisonous and some even have teeth',
+          'Some salamanders and frogs have tongues up to 10 times as long as their bodies',
+          'The largest salamander in the world in the Chinese Giant Salamander',
+          'Salamanders are the second largest group of amphibians.',
+          'Salamander are ectothermic (cold-blooded).',
+          'Salamanders produce a mucus that covers their skin.',
+          'Salamanders have very sensitive and absorbent skin.',
+          'Some salamanders can breathe through their skin.',
+          'Salamanders are cannibals.',
+          'Salamanders are capable of regenerating lost limbs.',
+          'A typical tiger salamander life span is 10-16 years in the wild',
+          'There are about 500 species of salamander.',
+          'Salamanders are found in North America, South America, Northern Africa, Asia and Europe'
+        ]
+        document.querySelector('#output_p').innerHTML =
+          facts[Math.floor(Math.random() * facts.length)]
+      }
+    </script>
+  </body>
+</html>
